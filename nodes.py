@@ -81,7 +81,7 @@ class DownloadAndLoadDynamiCrafterModel:
             'ckpt_name': model,
             'fp8_unet': fp8_unet
         }
-        if not hasattr(self, 'model') or self.model == None or custom_config != self.current_config:
+        if not hasattr(self, 'model') or self.model is None or custom_config != self.current_config:
             self.current_config = custom_config
             download_path = os.path.join(folder_paths.models_dir, "checkpoints", "dynamicrafter")
             model_path = os.path.join(download_path, model)
